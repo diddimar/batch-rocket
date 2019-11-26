@@ -1,0 +1,128 @@
+<div class="wrap">
+
+  <div class="form-style">
+
+    <h1 class="title">Batchbox</h1>
+
+
+    <div class="card">
+      <label class="subTitle">Diameter of the Heat Riser</label>
+      <input type="range" #diameter min="10" max="450" step="5" [value]="batchBox.riser.diameter"
+        (change)="diameterOutput.value = diameter.value; rangeChange(diameter.value)" class="slider">
+    </div>
+    <div class="card">
+      <div class="content riserTable">
+        <div class="top">
+          <div class="circle">
+            {{"\u2300"}}<br><output #diameterOutput [value]="batchBox.riser.diameter"></output> mm</div>
+        </div>
+      </div>
+    </div>
+    <div class="card result">
+      <div class="content">
+        <div class="bottom">
+
+          <table>
+            <caption>Fire Box</caption>
+            <tr>
+              <td><small>Width:</small></td>
+              <td>&nbsp;{{ batchBox.firebox.width | number:'1.0-0':'es' }} <small>mm</small></td>
+            </tr>
+            <tr>
+              <td><small>Height:</small></td>
+              <td>&nbsp;{{ batchBox.firebox.height | number:'1.0-0':'es' }} <small>mm</small></td>
+            </tr>
+            <tr>
+              <td><small>Depth:</small></td>
+              <td>&nbsp;{{ batchBox.firebox.depthMin | number:'1.0-0':'es' }} <small>to</small>
+                {{ batchBox.firebox.depthMax | number:'1.0-0':'es' }}
+                <small>mm</small></td>
+            </tr>
+          </table>
+          <table>
+            <caption>P-Channel</caption>
+            <tr>
+              <td><small>Width:</small></td>
+              <td>&nbsp;{{ batchBox.channel.width | number:'1.0-0':'es' }} <small>mm</small></td>
+            </tr>
+            <tr>
+              <td><small>Height:</small></td>
+              <td>&nbsp;{{ batchBox.channel.height | number:'1.0-0':'es' }} <small>mm</small></td>
+            </tr>
+            <tr>
+              <td><small>Overhang:</small></td>
+              <td>&nbsp;{{ batchBox.channel.overhang | number:'1.0-0':'es' }} <small>mm</small></td>
+            </tr>
+          </table>
+          <table>
+            <caption>Riser</caption>
+            <tr>
+              <td><small>Diameter</small></td>
+              <td>&nbsp;{{ batchBox.riser.diameter | number:'1.0-0':'es' }} <small>mm</small></td>
+            </tr>
+            <tr>
+              <td><small>Min Height:</small></td>
+              <td>&nbsp;{{ batchBox.riser.minHeight | number:'1.0-0':'es' }} <small>mm</small></td>
+            </tr>
+            <tr>
+              <td><small>Max Height:</small></td>
+              <td>&nbsp;{{ batchBox.riser.maxHeight | number:'1.0-0':'es' }} <small>mm</small></td>
+            </tr>
+          </table>
+
+          <table>
+            <caption>Port</caption>
+            <tr>
+              <td><small>Width:</small></td>
+              <td>&nbsp;{{ batchBox.port.width | number:'1.0-0':'es' }} <small>mm</small></td>
+            </tr>
+            <tr>
+              <td><small>Height:</small></td>
+              <td>&nbsp;{{ batchBox.port.height | number:'1.0-0':'es' }} <small>mm</small></td>
+            </tr>
+            <tr>
+              <td><small>Depth:</small></td>
+              <td>&nbsp;{{ batchBox.port.depth | number:'1.0-0':'es' }} <small>mm</small></td>
+            </tr>
+          </table>
+
+
+
+          <table>
+            <caption>Primary Air</caption>
+            <tr>
+              <td><small>Width:</small></td>
+              <td>&nbsp;{{ batchBox.primary.height | number:'1.0-0':'es' }} <small>mm</small></td>
+            </tr>
+            <tr>
+              <td><small>Height:</small></td>
+              <td>&nbsp;{{ batchBox.primary.height | number:'1.0-0':'es' }} <small>mm</small></td>
+            </tr>
+            <tr>
+              <td><small>Area:</small></td>
+              <td>&nbsp;{{ batchBox.primary.CSA | number:'1.0-0':'es' }} <small>mm<sup>2</sup></small></td>
+            </tr>
+          </table>
+
+          <table>
+            <caption>Air Flow</caption>
+            <tr>
+              <td><small>P-Channel:</small></td>
+              <td>&nbsp;{{ batchBox.channel.CSA | number:'1.0-0':'es' }} <small>mm<sup>2</sup></small></td>
+            </tr>
+            <tr>
+              <td><small>Plus Primary:</small></td>
+              <td>&nbsp;{{ batchBox.channel.CSA + batchBox.primary.CSA | number:'1.0-0':'es' }} <small>mm<sup>2</sup></small></td>
+            </tr>
+            <tr>
+              <td><small>Riser 25%:</small></td>
+              <td>&nbsp;{{ batchBox.riser.oneFourthCSA | number:'1.0-0':'es' }} <small>mm<sup>2</sup></small></td>
+            </tr>
+          </table>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <img src="./assets/images/core177b2_en.jpg" alt="Image of a Batchbox Design">
+</div>

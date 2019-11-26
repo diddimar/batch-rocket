@@ -1,0 +1,177 @@
+
+.wrap {
+  max-width:400px;
+  min-width:310px;
+  margin-left:auto;
+  margin-right:auto;
+  background:#fff;
+  border-radius:2px;
+  padding:20px;
+  padding-top: 0;
+  font-family: 'Droid Sans', sans-serif;
+}
+.card label {
+  width: 100%;
+}
+.base {
+  margin: 0px;
+  color: #69686888;
+}
+
+
+
+
+
+
+
+
+
+.card {
+  background-color:#ffffff; 
+  max-width: 800px;
+}
+.wrap .card .content {
+  text-align:center;
+}
+button {
+  padding: 10px;
+  width: 90%;
+  margin: 0 5% 25px 5%;
+  border-radius: 5px;
+  border: none;
+  background-color:#F3F3F3;
+  outline: none;
+}
+button:active {
+  background-color:#c5c5c5;
+}
+button::selection{
+
+}
+caption {
+  background-color: #F3F3F3;
+  letter-spacing: 0.25rem;
+  font-weight: 600;
+  color: #989A8F;
+}
+.wrap .card .top {
+  background-color:#F3F3F3;
+  height:60px;
+  border:1px solid #F3F3F3;
+}
+ul li {
+  border-bottom: 1px solid #989A8F;
+  margin-bottom: 10px;
+}
+.title {
+  color: red;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: 0;
+  text-align: right;
+}
+li .subTitle {
+  color: #989A8F;
+  text-align: center;
+}
+.wrap .card .top .circle {
+  width:100px;
+  height:100px;
+  font-size:20px;
+  color:#989A8F;
+  line-height:20px;
+  border-radius: 80px;
+  text-align:center;
+  background:#fff;
+  margin-top: 10px;
+  margin-left:auto;
+  margin-right:auto;
+  font-weight: 500;
+  border-top:1px solid #DDDDDD;
+}
+.riserTable table {
+   width:100%;
+  padding: 10px;
+  border:1px solid #F3F3F3;
+  float: left;
+}
+.riserTable table tr td:nth-child(odd) {
+  width: 50%;
+  text-align: right;
+}
+.riserTable table tr td:nth-child(even) {
+  width: 50%;
+  text-align: left;
+}
+.bottom table tr:nth-child(odd) {
+  background-color: #fff;
+}
+.bottom table tr:nth-child(even) {
+  background-color: #eee;
+  text-align: center;
+}
+.bottom table {
+  width:50%;
+  padding: 0 10px 10px 10px;
+  border:1px solid #F3F3F3;
+  float: left;
+
+  }
+ .bottom table:nth-child(even) {
+    border-left: none;
+}
+ .bottom table tr {
+    font-size: 14px;
+     color: #383838;
+   }
+ .bottom table tr td:last-of-type {
+    min-width: 90px;
+}
+.bottom  table tr td:first-of-type {
+    text-align: right;
+}
+.wrap .card .bottom {
+}
+.wrap .card p {
+  font-size:13px;
+  font-family: 'Droid Serif', sans-serif;
+  padding:5px;
+}
+.wrap .card span {
+ font-weight:bold; 
+}
+
+
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+/* Riser diameter slider */
+.slider {
+  -webkit-appearance: none;
+  width: 99%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+.slider:hover {
+  opacity: 1;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
